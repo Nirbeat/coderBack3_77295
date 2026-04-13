@@ -1,0 +1,11 @@
+1-OBJETO PROCESS
+-process.env
+-process.argv
+2-PROGRAMA CLI CON COMMANDER
+-subcomandos
+-flags
+-action
+-ejemplo de git commit
+-carga de .env dinamico
+3-LISTENERS
+-metodos on, emit y exit del objeto process
