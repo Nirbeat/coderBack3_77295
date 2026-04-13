@@ -1,11 +1,9 @@
-1-OBJETO PROCESS
--process.env
--process.argv
-2-PROGRAMA CLI CON COMMANDER
--subcomandos
--flags
--action
--ejemplo de git commit
--carga de .env dinamico
-3-LISTENERS
--metodos on, emit y exit del objeto process
+1-TDD
+    -DESARROLLO DE UNA FUNCION APLICANDO TDD
+2-MOCKING
+    -DESARROLLO PREVENTIVO CON MOCKS
+3-CUSTOM ERROR
+    -CREACION DE CLASE DE ERRORES PERSONALIZADOS
+    -APLICACIÓN SOBRE LA FUNCION HECHA PARA TDD
+4-PERFORMANCE
+    -COMPRESION
