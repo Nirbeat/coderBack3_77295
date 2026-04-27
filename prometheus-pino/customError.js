@@ -39,12 +39,12 @@ export function loginErrorHandler(err, req, res, next) {
     switch (err.code) {
         case -1:
             // MIENTRAS MÁS ESPECIFICO SEA LO QUE PASAMOS AL LOGGER, MEJOR
-            req.logger.warn("Ocurrio un problema con el password", err.name);
+
             break;
         case -2:
             // PARA ESTE ERROR, VAMOS A PASAR EL ENDPOINT, VERBO, INFO DEL ERROR Y TIMESTAMP
             // revisar archivo errors.log para ver el resultado
-            req.logger.error("Ocurrio un problema con el user", err.name);
+
             break;
         case 1:
             console.log("ErrorHandler", err.name);

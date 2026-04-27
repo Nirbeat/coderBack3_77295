@@ -1,4 +1,5 @@
 // IMPORTAMOS WINSTON
+import winston from 'winston';
 
 // CREAMOS EL LOGGER
 // niveles por defecto de winston
@@ -15,5 +16,17 @@
   silly: 6
 };*/
 
+const logger = winston.createLogger({
+  // CONSULTEN TODAS LAS OPCIONES DE CONFIGURACION EN LA DOCUMENTACION
+  transports: [
+    // CADA TRANSPORTE CONTIENE A TODOS LOS NIVELES POR DEBAJO DEL ESPECIFICADO
+    new winston.transports.Console({ level: 'http' }),
+    new winston.transports.File({ level: 'error', filename: 'errors.log' })
+  ]
+});
 
 // CREAMOS EL MIDDLEWARE QUE AGREGA WINSTON AL SERVER
+export function addLogger(req, res, next) {
+  req.logger = logger;
+  next();
+}

@@ -1,7 +1,7 @@
 config:
   target: "http://localhost:3000"   # URL BASE A TESTEAR
   phases:                           # DEFINICION DE PRUEBAS
-    - duration: 10                  # TIEMPO DE PRUEBA, 60 SEGUNDOS EN ESTE CASO
+    - duration: 15                  # TIEMPO DE PRUEBA, 60 SEGUNDOS EN ESTE CASO
       arrivalRate: 300                # CANTIDAD DE PRUEBAS POR SEGUNDO
 
 scenarios:                          # ESCENARIOS DE PRUEBA

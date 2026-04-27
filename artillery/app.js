@@ -19,7 +19,7 @@ app.use(json());
 // PRUEBEN GOLPEAR ESTE ENDPOINT CON ARTILLERY USANDO EL PRIMER COMANDO CITADO ARRIBA
 // PARA VER LA DIFERENCIA ENTRE LA RESPUESTA DE UNA OPERACION SIMPLE Y UNA COMPLEJA
 app.get('/operacion-compleja', async (req, res) => {
-      let result = 0;
+    let result = 0;
 
     for (let i = 0; i < 5e9; i++) {
         result++;
@@ -44,28 +44,28 @@ app.get('/operacion-simple', async (req, res) => {
 const users = []
 
 // CONSULTAMOS ENDPOINT DE USUARIOS FAKER
-app.get('/user/faker', async(req, res, next)=> {
+app.get('/user/faker', async (req, res, next) => {
     res.json(generateUsers());
 })
 
 // CON EL USUARIO DE FAKER, PROBAMOS REGISTRO
-app.post('/user/register', async(req, res, next)=> {
-    const {body} = req;
+app.post('/user/register', async (req, res, next) => {
+    const { body } = req;
     users.push(body);
     res.json(body);
 });
 
 // CON EL USUARIO DE FAKER REGISTRADO, PROBAMOS INICIO DE SESION
-app.post('/user/login', async(req, res, next)=> {
-    const {email, password} = req.body;
+app.post('/user/login', async (req, res, next) => {
+    const { email, password } = req.body;
 
-    users.forEach(user=>{
-        if(user.email = email && user.password == password){
-            res.status(200).json({message: "login exitoso"});
-        }else{
-            res.status(400).json({message: "Login rechazado"});
+    users.forEach(user => {
+        if (user.email = email && user.password == password) {
+            res.status(200).json({ message: "login exitoso" });
+        } else {
+            res.status(400).json({ message: "Login rechazado" });
         }
     });
-    
+
 });
 app.listen(3000, () => console.log('server up'));

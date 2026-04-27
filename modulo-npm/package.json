@@ -16,7 +16,5 @@
   "author": "",
   "license": "ISC",
   "type": "module",
-  "dependencies": {
-    "muestraoperacionescoder2": "^1.0.0"
-  }
+  "dependencies": {}
 }
