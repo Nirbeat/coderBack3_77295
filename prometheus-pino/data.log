@@ -1,8 +1,0 @@
-{"level":30,"time":1777302381835,"pid":408,"hostname":"DESKTOP-EH3T1CN","msg":"aplicacion corriendo en puerto 3000"}
-{"level":30,"time":1777302400920,"pid":408,"hostname":"DESKTOP-EH3T1CN","msg":"Login exitoso: {\"user\":\"user\"}"}
-{"level":30,"time":1777302514269,"pid":12876,"hostname":"DESKTOP-EH3T1CN","msg":"aplicacion corriendo en puerto 3000"}
-{"level":30,"time":1777302649968,"pid":12344,"hostname":"DESKTOP-EH3T1CN","msg":"aplicacion corriendo en puerto 3000"}
-{"level":30,"time":1777302696849,"pid":12344,"hostname":"DESKTOP-EH3T1CN","msg":"Login exitoso: {\"user\":\"user\"}"}
-{"level":30,"time":1777302706075,"pid":12344,"hostname":"DESKTOP-EH3T1CN","msg":"Login exitoso: {\"user\":\"user\"}"}
-{"level":50,"time":1777302720714,"pid":12344,"hostname":"DESKTOP-EH3T1CN","msg":"Error al iniciar sesión: user=. Motivo: Ocurrio un problema con el user"}
-{"level":30,"time":1777302783954,"pid":7704,"hostname":"DESKTOP-EH3T1CN","msg":"aplicacion corriendo en puerto 3000"}
