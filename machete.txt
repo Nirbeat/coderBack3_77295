@@ -1,4 +1,6 @@
-1-gestion de versiones (nvm)
-2-npm avanzado y creacion de libreria
-3-loggin
-4-artillery
+1-DOCUMENTACION
+    -JSDOCS
+    -SWAGGER
+2-SEGURIDAD
+    -OWASP TOP 10
+    -SNYK
