@@ -1,7 +1,7 @@
 import assert from "assert";
 import supertest from "supertest";
 
-const requester = supertest("http://localhost:3000");
+const requester = supertest("https://flat-cougars-deny.loca.lt/");
 
 describe("testeo del server", function () {
     it("el servidor deberia responder con un status de 200 si la operacion es correcta", async function () {

@@ -24,7 +24,7 @@ npx localtunnel --port 3000
 CREAR ARCHIVOS PARA CI-CD CON GITHUB ACTIONS
 
     -modificar script de test por "test": "npx mocha test/server.test.js",
-    -.github/workflows/deply.yml
+    -.github/workflows/deploy.yml
 name: Pipeline Integral CI/CD
 on:
   push:
