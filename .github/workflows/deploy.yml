@@ -24,7 +24,7 @@ jobs:
       - name: 4. Ejecutar los Tests contra mi Docker Local
         run: npm test
         env:
-          SERVER_URL: "https://slimy-rooms-press.loca.lt"
+          SERVER_URL: "https://fair-eels-cheer.loca.lt/"
 
       # ==========================================
       # PARTE 2: CD (DESPLIEGUE CONTINUO)
