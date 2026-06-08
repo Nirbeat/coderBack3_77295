@@ -1,19 +1,10 @@
 import e from "express";
-import { dividir } from "./services/operation.services.js";
-import { environment } from "./config/environment.js";
-
+import operationRouter from "./routes/operation.router.js"
+import { env } from "./config/environment.js";
 const app = e();
 
-app.listen(environment.PORT, () => {
-    console.log("server up on " + 3000);
+app.listen(env.PORT, () => {
+    console.log("server up on " + env.PORT);
 });
 
-app.get("/:dividendo/:divisor", (req, res, next) => {
-    try {
-        const { dividendo, divisor } = req.params;
-        const resultado = dividir(dividendo, divisor);
-        res.status(200).json({ resultado });
-    } catch (error) {
-        next(error);
-    }
-});
+app.use("/operaciones", operationRouter);

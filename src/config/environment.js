@@ -1,7 +1,7 @@
 import { config } from "dotenv";
 
-config();
+config({ path: ".env" });
 
-export const environment = {
+export const env = {
     PORT: process.env.PORT
 }

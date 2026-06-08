@@ -1,8 +1,8 @@
 import assert from "assert";
 import { dividir } from "../src/services/operation.services.js";
 
-describe("test de division", function () {
-    it("debe dar error al dividir por cero", function () {
-        assert.throws(() => dividir(3, 0));
+describe("testeo de servicios de operacion", function () {
+    it("debería devolver error si se divide por cero", function () {
+        assert.throws(() => dividir(4, 0));
     });
-});
+})
