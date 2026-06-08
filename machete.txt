@@ -23,3 +23,41 @@ npx localtunnel --port 3000
 
 CREAR ARCHIVOS PARA CI-CD CON GITHUB ACTIONS
 
+    -modificar script de test por "test": "npx mocha test/server.test.js",
+    -.github/workflows/deply.yml
+name: Pipeline Integral CI/CD
+on:
+  push:
+    branches: [ ci-cd ] # Se ejecuta cuando hacés push a main
+
+jobs:
+  pipeline-completo:
+    runs-on: ubuntu-latest # Corre en la nube de GitHub
+    steps:
+      # ==========================================
+      # PARTE 1: CI (INTEGRACIÓN CONTINUA)
+      # ==========================================
+      - name: 1. Descargar el código de GitHub
+        uses: actions/checkout@v4
+
+      - name: 2. Instalar Node.js en la nube
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 3. Instalar dependencias del Test
+        run: npm install
+
+      - name: 4. Ejecutar los Tests contra mi Docker Local
+        run: npm test
+        env:
+          SERVER_URL: "https://slimy-rooms-press.loca.lt"
+
+      # ==========================================
+      # PARTE 2: CD (DESPLIEGUE CONTINUO)
+      # ==========================================
+      # - name: 5. Disparar el Despliegue en el Contenedor
+      #   # Este comando solo se ejecuta si el paso 4 (los tests) dio VERDE
+      #   run: |
+      #     curl -X POST "https://slimy-rooms-press.loca.lt/deploy"
+
